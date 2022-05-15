@@ -1,0 +1,74 @@
+<%- include( "partials/head", {title: "Inicio"}) %>
+
+<body>
+        <!--header-->
+        <%- include("partials/header") %>
+            <!--main-->
+<div class="parallax">
+    <img src="/img/LOGOWHITE.png" alt="">
+</div>
+            <main class="container">
+                <div class="row">
+                    <h2 class="col-12 mainDivider">OFERTAS</h2>
+                    <% for (let product of offers){ %>
+                    <article class="col-12 col-md-4">
+                        <%- include("components/productCard", {product}) %>
+
+                    </article>
+                    <%}%>
+                </div>
+                <div class="row">
+                    <h2 class="col-12 mainDivider">TENDENCIAS</h2>
+                    <article class="col-12 col-md-6 zoomOnHover">
+                        <img src="/img/T002.jpg" alt="">
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <img class="imgten zoomOnHover" src="/img/T001.jpg" alt="">
+                        <img class="imgten zoomOnHover" src="/img/T005.jpg" alt="">
+                    </article>
+                    <article class="col-md-3">
+                        <img class="imgten zoomOnHover" src="/img/T003.jpg" alt="">
+                        <img class="imgten zoomOnHover" src="/img/T004.jpg" alt="">
+                    </article>
+                </div>
+                <div class="row">
+                    <h2 class="col-12 mainDivider">LO MAS VENDIDO</h2>
+                        <% for (let product of mostSelled){ %>
+                            <article class="col-12 col-md-4">
+                            <%- include("components/productCard", {product}) %>
+                            </article>
+                        <%}%>
+
+                </div>
+                <div class="row">
+                    <h2 class="col-12 mainDivider">SUB-SECCIONES</h2>
+                    <article class="col-12 col-md-3">
+                        <img src="/img/SUB001.png" alt="">
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <img src="/img/SUB002.png" alt="">
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <img src="/img/SUB003.png" alt="">
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <img src="/img/SUB004.png" alt="">
+                    </article>
+                </div>
+                <div class="row suscribite">
+                    <div class="col-md-3">
+                        <p class="pbutom">¡Dejanos tu mail para enterarte de todas nuestras novedades!</p>
+                    </div>
+                    <div class="col-md-6 inp0">
+                        <input class="inp1" type="text">
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-lg btn-primary btnsus" disabled>SUSCRIBITE</button>
+                    </div>
+                </div>
+            </main>
+            <!--FOOTER-->
+            <%- include("partials/footer") %>
+    </body>
+
+    </html>

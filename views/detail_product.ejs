@@ -1,0 +1,54 @@
+<!-- Head-->
+<%- include("partials/head", {title: "Inicio"}) %>
+    <!-- /Head-->
+
+    <body>
+        <!--header-->
+        <%- include("partials/header", {title: "Inicio"}) %>
+        <div class="container">
+            <section class="userForm mb-3" >
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="card-img" src="/img/products/<%= product.img %>" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <p class="card-text parrafo"> <strong>Marca:</strong> <%= product.brand.name%>
+                            </p>
+                            <p class="card-text parrafo">
+                                <strong>Año:</strong> <%= product.releaseYear%>
+                            </p>
+                            <p class="card-text parrafo">
+                                <strong>Condicion:</strong> <%= product.productCondition.name%>
+                            </p>
+                         <p class="card-text parrafo">
+                      <strong>Color:</strong>: <%= product.colour.name%>
+                        </p>
+                        <p class="card-text parrafo"> 
+                        <strong>Disponibles:</strong> <%= product.stock%> unidades
+                        </p>
+                        <p class="card-text parrafo">
+                        <strong>Precio:</strong> $<%= product.price%>
+                        </p>
+                         <p class="card-text parrafo">
+                        <%= product.description%>
+                        </p>
+                        <div>
+                            <% if(user != undefined){ %>
+                            <button class="btn btn-primary">COMPRAR</button>
+                            <button class="btn btn-primary">AGREGAR AL CARRITO</button>
+                            <a href="/products/edit/<%= product.id %>" class="action-button edit">                                <button class="btn btn-primary"> EDITAR PRODUCTO</button> </a>
+                            <% } %>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+    <!--FOOTER-->
+    <%- include("partials/footer") %>
+        <!-- /FOOTER-->
+
+        </html>

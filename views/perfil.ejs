@@ -1,0 +1,42 @@
+<!-- Head-->
+<%- include("partials/head", {title: "Inicio"}) %>
+    <!-- /Head-->
+
+
+    <body>
+        <%- include("partials/header") %>
+    <div class="container">
+
+    <section class="mb-3 userForm espacio">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img class="card-img imgRdius" src="/img/users/<%= user.avatar %>" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+
+                    <p class="card-text parrafo">
+                        <strong>Nombre</strong> <%= user.name%>
+                    </p>
+                    <p class="card-text parrafo">
+                  <strong>Apellido:</strong> <%= user.lastName%>
+                </p>
+                <p class="card-text parrafo">
+                    <strong>Fecha de nacimiento:</strong> <%= user.birthDate%>
+                </p>
+                <p class="card-text parrafo">
+                    <strong> Email regitrado</strong>: <%= user.email%>
+                </p>
+                <p class="card-text parrafo">
+                    <strong> Compras realizadas:</strong> 0
+                </p>
+                <p class="card-text parrafo">
+                    <a href="/products/create"><button class="btn btn-primary">crear producto</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<%- include("partials/footer") %>
+</body>

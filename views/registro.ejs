@@ -1,0 +1,77 @@
+<!-- Head-->
+<%- include("partials/head", {title: "Inicio"}) %>
+    <!-- /Head-->
+    <script src="/js/userRegisterValidation.js"></script>
+
+
+    <body>
+        <%- include("partials/header") %>
+
+            <section class="container section">
+                <div class="col-md-12">
+                    <h1>Registro</h1>
+                    <p>Por favor ingresá tus datos para registrarte en nuestro sitio</p>
+                    <div class="col-md-6 formRegistro">
+                        <form method="POST" action="/users/register" class="userForm form-group" id="userForm" enctype="multipart/form-data">
+                            <div class="imgAuto">
+                                <img class="imgRegister" src="/img/REFISTERICON[873].png" alt="">
+                            </div>
+                            <!-- Mail -->
+                            <div class="divre">
+                                <input class="medida form-control" type="email"  name="email" id="email" value="" placeholder="Email" />
+                                    </div>
+                                    <!-- Nombre -->
+                                    <div class="divre">
+                                        <input class="medida form-control" type="text"   name="name" id="name" value="" placeholder="Nombre" />
+                                    </div>
+                                    <!-- apellido -->
+                                    <div class="divre">
+                                        <input class="medida form-control" type="text"   name="lastname" id="lastname" value="" placeholder="Apellido" />
+                                    </div>
+                                    <!-- fecha de nacimiento -->
+                                    <div class="divre">
+                                        <input class="medida form-control"  type="date" name="birthDate" id="date" />
+                                    </div>
+                                    <!-- Contraseña -->
+                                    <div class="divre">
+                                        <input class="medida form-control" type="password"  name="pass" id="password" placeholder="Contraseña" />
+                                    </div>
+                                    <div class="divre">
+                                        <input class="medida form-control" type="password"  name="pass2" id="password" placeholder="Repetir Contraseña" />
+                                    </div>
+                                    <div class="divre">
+                                        <input class="medida"  type="file" name="avatar" id="avatar" />
+                                    </div>
+
+                                    <div class="errors">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                    <% if( typeof errors != "undefined") { %>
+                                        <ul>
+                                            <% for( let i = 0; i< errors.length; i++){ %>
+                                                <li class="textError">
+                                                    <%= errors[i].msg %>
+                                                </li>
+                                                <%}  %>
+                                                    <%} %>
+                                        </ul>
+
+                                    <!-- Enviar datos -->
+                                    <div class="divre">
+                                        <input class="enviar btn btn-warning butonregist" type="submit" value="Crear cuenta" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+                <!--FOOTER-->
+                <%- include("partials/footer") %>
+                <!-- /FOOTER-->
+                
+                
+            </body>
+            
+            </html>

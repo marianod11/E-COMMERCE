@@ -1,0 +1,87 @@
+<!--header-->
+<div class="container-fluid nav-arriba">
+    <ul>
+        <%if(user == undefined ){ %>
+            <a href="">
+                <li>ayuda</li>
+            </a>
+            <a href="/users/register">
+                <li>Registrarse</li>
+            </a>
+            <a href="/users/login">
+                <li>Iniciar sesion</li>
+            </a>
+            <%} else { %>
+                <div class="btn-group" role="group">
+                    <h2 class="marginText">Bienvenido/a</h2>
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle loginButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= user.name %> 
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item mainNavbar" href="/users/miperfil">Mi Perfil</a>
+                        <a class="dropdown-item mainNavbar" href="#">Carrito</a>
+                        <form action="/users/cerrarsesion" method="POST">
+                            <button class="dropdown-item mainNavbar">Cerrar Sesion</button>
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+            </ul>
+</div>
+<header class="container">
+    <div class="row">
+        <div class="col-12 col-md-2 logo-header">
+            <a href="/"><img class="imglogo" src="/img/LOGO.png" alt="logo"></a>
+        </div>
+<div class="col-12 col-md-7 buscador-header butoomsearch butom-buscador">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="input-group-text btn" id="btnGroupAddon"><svg class="bi bi-search ic-search" width="1em"
+                    height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                        clip-rule="evenodd" />
+                    <path fill-rule="evenodd"
+                        d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                        clip-rule="evenodd" /> </svg></button>
+        </div> <input type="text" class="form-control" placeholder="Guitar Store" aria-label="Input group example"
+            aria-describedby="btnGroupAddon">
+    </div>
+</div>
+        <div class="col-md-3 ich"> <svg class="bi bi-heart icheder" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z"
+                    clip-rule="evenodd" /> </svg> <svg class="bi bi-trophy icheder" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 011-1h8a1 1 0 011 1H3zm2-1a1 1 0 011-1h4a1 1 0 011 1H5z" />
+                <path fill-rule="evenodd"
+                    d="M12.5 3a2 2 0 100 4 2 2 0 000-4zm-3 2a3 3 0 116 0 3 3 0 01-6 0zm-6-2a2 2 0 100 4 2 2 0 000-4zm-3 2a3 3 0 116 0 3 3 0 01-6 0z"
+                    clip-rule="evenodd" />
+                <path d="M7 10h2v4H7v-4z" />
+                <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z" /> </svg> <svg class="bi bi-people-circle icheder" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 008 15a6.987 6.987 0 005.468-2.63z" />
+                <path fill-rule="evenodd" d="M8 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zM0 8a8 8 0 1116 0A8 8 0 010 8z"
+                    clip-rule="evenodd" /> </svg> </div>
+        <div class="col-12 barra-nav navbar-nav" id="navbarSupportedContent">
+            <div>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <button><svg class="bi bi-justify" width="1em"
+                            height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2 12.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z"
+                                clip-rule="evenodd" /> </svg></i> </button> </a>
+                </li>
+            </div>
+        </div>
+        <ul class="col-md-12 nav-desktop">
+            <li ><a class="btn mainNavbar" href="/todoslosproductos">PRODUCTOS</a></li>
+            <li ><a class="btn mainNavbar" href="">GUITARRAS</a></li>
+            <li ><a class="btn mainNavbar" href="">PEDALES/EFECTOS</a></li>
+            <li ><a class="btn mainNavbar" href="">AMPLIFICADORES</a></li>
+            <li ><a class="btn mainNavbar" href="">REPUESTOS</a></li>
+            <li ><a class="btn mainNavbar" href="">USADOS</a></li>
+            <li ><a class="btn mainNavbar" href="">ACCESORIOS</a></li>
+        </ul>
+    </div>
+</header>

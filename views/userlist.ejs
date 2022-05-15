@@ -1,0 +1,16 @@
+<%- include("partials/head") %>
+
+<body>
+  <%- include("partials/header") %>
+  <main>
+    <ul>
+      <% for(let i = 0; i< brand.length; i++){ %>
+      <li>
+        email: <%= brand[i].name %>
+      </li>
+
+      <%} %>
+    </ul>
+  </main>
+  <%- include("partials/footer") %>
+</body>

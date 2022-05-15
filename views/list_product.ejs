@@ -1,0 +1,19 @@
+<%- include("partials/head") %>
+
+    <body>
+        <%- include("partials/header") %>
+            <h1>Listado</h1>
+            <ul>
+
+                <% for(let i =0; i < product.length; i++ ){ %>
+                    <a href="/products/detail/<%= product[i].id %> ">
+                        <li>
+                            <%= product[i].name %>
+                        </li>
+                    </a>
+                    <% } %>
+            </ul>
+            <%- include("partials/footer") %>
+    </body>
+
+    </html>

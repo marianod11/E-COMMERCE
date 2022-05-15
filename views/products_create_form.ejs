@@ -1,0 +1,110 @@
+<%- include("partials/head", {title: "Inicio"}) %>
+    <script src="/js/productRegisterValidation.js"></script>
+
+    <body>
+        <%- include("partials/header") %>
+
+            <section class="container">
+                <h1 class="col-md-12 h2Product">Producto nuevo</h1>
+                <% if( typeof errors != "undefined") { %>
+                    <p>error</p>
+                    <ul>
+                        <% for( let x = 0; x< errors.length; x++){ %>
+                            <li>
+                                <%= errors[x].msg %>
+                            </li>
+                            <%}  %>
+                                <%} %>
+                    </ul>
+                    <div class="errors">
+                        <ul>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 formRegistro">
+                        <form method="post" class="productForm userForm form-group" action="/products/create" enctype="multipart/form-data">
+                            <div>
+                                <!-- Nombre -->
+                                <div class="divre">
+                                    <input class="form-control" type="text" name="name" id="title" placeholder="Título" />
+                                </div>
+                                <div class="divre">
+                                    <select name="brand_id" class="form-control" id="">
+                                    <% for (let i = 0; i< brand.length; i++){ %>
+                                        <option value="<%= brand[i].id %> " >
+                                        <%= brand[i].name %>
+                                        </option>
+                                        <% } %>
+                                </select>
+                                </div>
+                                <div class="divre">
+                                    <input class="form-control" type="date" name="releaseYear" id="anio" placeholder="Año" />
+                                </div>
+                                <div class="divre ">
+                                    <select name="productCondition_id" class="form-control" id="">
+                                    <% for (let j = 0; j< productCondition.length; j++){ %>
+                                        <option value="<%= productCondition[j].id %> " >
+                                        <%= productCondition[j].name %>
+                                        </option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="divre">
+                                    <select name="colour_id" class="form-control" id="">
+                                    <% for (let j = 0; j< colour.length; j++){ %>
+                                        <option value="<%= colour[j].id %> " >
+                                        <%= colour[j].name %>
+                                        </option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="divre">
+                                    <select name="productType_id" class="form-control" id="">
+                                    <% for (let j = 0; j< productType.length; j++){ %>
+                                        <option class="form-group" value="<%= productType[j].id %> " >
+                                        <%= productType[j].name %>
+                                        </option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                    <div class="divre">
+                                        <select name="category_id" class="form-control" id="">
+                                    <% for (let i = 0; i< category.length; i++){ %>
+                                        <option value="<%= category[i].id %> " >
+                                        <%= category[i].name %>
+                                        </option>
+                                        <% } %>
+                                    </select>
+                                    </div>
+                                    <div class="divre">
+                                        <input class="form-control" type="number" name="stock" id="stock" placeholder="Stock" />
+                                    </div>
+                                    <div class="divre precio">
+                                        <input class="form-control" type="number" name="price" id="price" placeholder="Precio" /><p> $</p>
+                                  </div>
+                                    <div class="divre precio">
+                                        <input class="form-control" type="number" name="discount" id="discount" placeholder="Descuento" /><p>%</p>
+                                    </div>
+                                    <div class="divre">
+                                        <input class="medida" type="file" name="img" id="" />
+                                    </div>
+                                    <div class="divre">
+                                        <label for="">Descripción </label><br>
+                                        <textarea name="description" id="description" cols="50" rows="10"></textarea>
+                                    </div>
+                                    <div class="divre butonRegister">
+                                        <input type="submit" class="enviar btn btn-warning butonregist inputRegister" value="Confirmar" />
+                                        <input type="reset" class="enviar btn btn-warning butonregist" value="Cancelar" />
+                                    </div>
+                                </div>
+                        </form>
+                        </div>
+            </section>
+
+            <!--FOOTER-->
+            <%- include("partials/footer") %>
+                <!-- /FOOTER-->
+
+    </body>
+
+    </html>

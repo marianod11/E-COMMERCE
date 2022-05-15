@@ -1,0 +1,63 @@
+<%- include("partials/head") %> <%-include("partials/header") %>
+<script src="/js/loginValidation.js"></script>
+
+<body>
+  <div class="form container">
+    <form
+      action="/users/login"
+      method="POST"
+      id="userForm"
+      class="userForm col-auto"
+    >
+      <div class="imgAuto">
+        <img class="imgLogin" src="/img/USERLOGINICON.png" alt="" />
+      </div>
+      <div class="col-auto">
+        <label for="exampleInputEmail1">Email</label>
+        <input
+          type="email"
+          class="form-control inputForm"
+          name="email"
+          id="email"
+          placeholder="ejemplo@gmail.com"
+        />
+      </div>
+      <div class="col-auto">
+        <label for="">Contraseña</label>
+        <input
+          type="password"
+          class="form-control inputForm"
+          name="password"
+          id="password"
+          placeholder="Ingrese aqui su contraseña"
+        />
+      </div>
+      <div class="recordame">
+        <input type="checkbox" class="recorInput" name="recordame" />
+        <label for="" class="form-group form-check recor"
+          >recordar usuario</label
+        >
+      </div>
+      <div class="imgAuto">
+        <input
+          type="submit"
+          class="enviar btn btn-warning"
+          value="INICIAR SESION"
+        />
+      </div>
+      <div class="errors">
+        <ul></ul>
+      </div>
+    </form>
+  </div>
+  <% if( typeof errors != "undefined") { %>
+  <p>error</p>
+  <ul>
+    <% for( let i = 0; i< errors.length; i++){ %>
+    <li>
+      <%= errors[i].msg %>
+    </li>
+    <%} %> <%} %>
+  </ul>
+  <%- include("partials/footer") %>
+</body>
