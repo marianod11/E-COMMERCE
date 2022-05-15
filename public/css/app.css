@@ -1,0 +1,115 @@
+@media (max-width:460px) {
+    body {
+        padding: 0px;
+        font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+        background-color: white;
+    }
+    a {
+        color: #00B7FF;
+    }
+    header {
+        background-color: gray;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 0px 40px 0px;
+    }
+    .imglogo {
+        width: 30%;
+    }
+    .butoomsearch {
+        width: 80%;
+    }
+    img {
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .ic-search {
+        margin: 5px;
+    }
+    .barra-nav {
+        margin-top: 20px;
+    }
+    main {
+        text-align: center;
+        justify-content: center;
+    }
+    .precios {
+        display: flex;
+        justify-content: center;
+        margin: 0px 10px;
+        font-size: 20px;
+    }
+    .precio-tachado {
+        margin: 0px 5px;
+        text-decoration: line-through;
+        color: violet;
+    }
+    h2 {
+        margin: 20px 0px;
+    }
+    footer {
+        text-align: center;
+        background-color: rgba(102, 114, 131, 0.993);
+        padding: 20px 0px 10px 0px;
+        text-decoration: none;
+    }
+    li {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+    }
+    ul {
+        text-decoration: none;
+    }
+    a {
+        color: rgb(221, 211, 211);
+        font-size: 10px;
+    }
+    h3 {
+        color: white;
+        font-size: 16px;
+        margin: 20px 0px 0px 0px;
+    }
+    .pp {
+        font-size: 10px;
+        color: rgb(36, 35, 35);
+        margin: 0px;
+    }
+    .h3footer {
+        margin: 0px 0px 4px 0px;
+    }
+    .ulicons {
+        justify-content: center;
+    }
+    .divfooter {
+        color: white;
+        padding: 0px;
+        background-color: rgb(63, 61, 61);
+        text-align: center;
+        height: 29px;
+    }
+    .ics {
+        background-color: rgb(56, 54, 54);
+        border-radius: 50%;
+        margin: 5px;
+    }
+    .arti4 {
+        display: none;
+    }
+    .nav-desktop {
+        display: none;
+    }
+    .ulmobile,
+    .suscribite,
+    .nav-arriba,
+    .ich,
+    .banner {
+        display: none;
+    }
+    div p {
+        text-align: left;
+    }
+    .mainProduct{
+        margin: 40px;
+    }
+}

@@ -1,0 +1,59 @@
+.carrito-img {
+    width: 80%;
+}
+
+.article {
+    display: flex;
+    justify-content: center;
+}
+
+.divcarri {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 28px;
+    margin: 40px 0px 0px 0px;
+}
+
+.part {
+    margin: 0px 10px 0px 10px;
+}
+
+.ptar {
+    text-align: start;
+}
+
+.card {
+    background-color: rgb(177, 169, 169);
+}
+
+.btn-primary {
+    background-color: red;
+    border-color: red;
+}
+
+h4 {
+    font-size: 21px;
+}
+
+.h2 {
+    text-align: left;
+}
+
+.article {
+    margin: 20px 0px 0px 0px;
+    border-top: 1px solid gray;
+    padding: 20px;
+}
+
+.icart1 {
+    background-color: red;
+}
+
+.main {
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+.linea {
+    border-top: 1px solid gray;
+}

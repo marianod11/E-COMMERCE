@@ -1,0 +1,50 @@
+.divre {
+  margin: 10px 0px 0px 0px;
+}
+
+.section {
+  text-align: center;
+  padding: 10px;
+}
+
+.medida {
+  width: 70%;
+  display: inline-table;
+}
+.formRegistro {
+  margin: auto;
+}
+.butonregist {
+  margin: 10px 0px;
+}
+
+.precio {
+  display: flex;
+}
+.h2Product {
+  text-align: center;
+}
+.butonRegister {
+  display: flex;
+  justify-content: center;
+}
+.inputRegister {
+  margin: 10px;
+}
+.imgRegister {
+  width: 20%;
+}
+.detailProduct {
+  text-align: center;
+}
+.parrafo {
+  text-align: initial;
+}
+.imgRdius {
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+}
+.espacio {
+  margin: 30px;
+}

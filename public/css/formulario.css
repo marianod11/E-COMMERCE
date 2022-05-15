@@ -1,0 +1,59 @@
+.divre {
+  margin: 10px 0px 0px 0px;
+}
+body,
+html {
+  height: 100%;
+}
+
+.inputForm {
+  width: 100%;
+}
+
+.form {
+  width: 70%;
+  padding: 40px;
+}
+
+.userForm {
+  border: rgb(241, 239, 239) 1px solid;
+  padding: 18px;
+  border-radius: 7px;
+}
+.recordame {
+  display: flex;
+}
+.recorInput {
+  margin: 8px 12px;
+}
+.enviar {
+  margin: 0px 180px;
+  width: 155px;
+  border-color: red;
+  background-color: red;
+  color: white;
+}
+.enviar:hover {
+  background-color: rgb(211, 8, 8);
+  border-color: rgb(211, 8, 8);
+  color: white;
+}
+.recor {
+  margin: 0px -15px;
+}
+.eliminar {
+  display: flex;
+  justify-content: center;
+}
+.formEdit {
+  padding: 20px;
+}
+.imgLogin {
+  width: 15%;
+}
+.imgAuto {
+  text-align: center;
+}
+.textError {
+  color: red;
+}
